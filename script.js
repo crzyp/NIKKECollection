@@ -28,6 +28,185 @@ function loadCollection(){
             nikke.classList.add('dim');
         }
     }
+
+    ssrMis = document.getElementById("ssrMissilis");
+    ssrMisNikke = ssrMis.querySelectorAll("ul li");
+    for (let i = 0; i < ssrMisNikke.length; i++){
+        nikke = ssrMisNikke[i];
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    ssrTet = document.getElementById("ssrTetra");
+    ssrTetNikke = ssrTet.querySelectorAll("ul li");
+    for (let i = 0; i < ssrTetNikke.length; i++){
+        nikke = ssrTetNikke[i];
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    ssrPil = document.getElementById("ssrPilgrim");
+    ssrPilNikke = ssrPil.querySelectorAll("ul li");
+    for (let i = 0; i < ssrPilNikke.length; i++){
+        nikke = ssrPilNikke[i];
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    ssrAbn = document.getElementById("ssrAbnormal");
+    ssrAbnNikke = ssrAbn.querySelectorAll("ul li");
+    for (let i = 0; i < ssrAbnNikke.length; i++){
+        nikke = ssrAbnNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    srEly = document.getElementById("srElysion");
+    srElyNikke = srEly.querySelectorAll("ul li");
+    for (let i = 0; i < srElyNikke.length; i++){
+        nikke = srElyNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    srMis = document.getElementById("srMissilis");
+    srMisNikke = srMis.querySelectorAll("ul li");
+    for (let i = 0; i < srMisNikke.length; i++){
+        nikke = srMisNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    srTet = document.getElementById("srTetra");
+    srTetNikke = srTet.querySelectorAll("ul li");
+    for (let i = 0; i < srTetNikke.length; i++){
+        nikke = srTetNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    srAbn = document.getElementById("srAbnormal");
+    srAbnNikke = srAbn.querySelectorAll("ul li");
+    for (let i = 0; i < srAbnNikke.length; i++){
+        nikke = srAbnNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    rEly = document.getElementById("rElysion");
+    rElyNikke = rEly.querySelectorAll("ul li");
+    for (let i = 0; i < rElyNikke.length; i++){
+        nikke = rElyNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    rMis = document.getElementById("rMissilis");
+    rMisNikke = rMis.querySelectorAll("ul li");
+    for (let i = 0; i < rMisNikke.length; i++){
+        nikke = rMisNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
+    rTet = document.getElementById("rTetra");
+    rTetNikke = rTet.querySelectorAll("ul li");
+    for (let i = 0; i < rTetNikke.length; i++){
+        nikke = rTetNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0];
+        if (queryString[number - 1] == 1){
+            nikke.classList.remove('dim');
+            nikke.classList.add('light');
+        } else{
+            nikke.classList.remove('light');
+            nikke.classList.add('dim');
+        }
+    }
+
     return;
 }
 
@@ -44,6 +223,7 @@ function toggle(id){
 
 function share(){
     file = 0n;
+
     ssrEly = document.getElementById("ssrElysion");
     ssrElyNikke = ssrEly.querySelectorAll("ul li");
     for (let i = 0; i < ssrElyNikke.length; i++){
@@ -53,6 +233,143 @@ function share(){
             file += BigInt(2 ** number);
         }
     }
+
+    ssrMis = document.getElementById("ssrMissilis");
+    ssrMisNikke = ssrMis.querySelectorAll("ul li");
+    for (let i = 0; i < ssrMisNikke.length; i++){
+        nikke = ssrMisNikke[i];
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    ssrTet = document.getElementById("ssrTetra");
+    ssrTetNikke = ssrTet.querySelectorAll("ul li");
+    for (let i = 0; i < ssrTetNikke.length; i++){
+        nikke = ssrTetNikke[i];
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
+    // why the fk am i doing it like this
+    ssrPil = document.getElementById("ssrPilgrim");
+    ssrPilNikke = ssrPil.querySelectorAll("ul li");
+    for (let i = 0; i < ssrPilNikke.length; i++){
+        nikke = ssrPilNikke[i];
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    ssrAbn = document.getElementById("ssrAbnormal");
+    ssrAbnNikke = ssrAbn.querySelectorAll("ul li");
+    for (let i = 0; i < ssrAbnNikke.length; i++){
+        nikke = ssrAbnNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
+    // ASDOHFEIU WHY AM I DOING IT LIKE THIS
+    srEly = document.getElementById("srElysion");
+    srElyNikke = srEly.querySelectorAll("ul li");
+    for (let i = 0; i < srElyNikke.length; i++){
+        nikke = srElyNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
+    srMis = document.getElementById("srMissilis");
+    srMisNikke = srMis.querySelectorAll("ul li");
+    for (let i = 0; i < srMisNikke.length; i++){
+        nikke = srMisNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    srTet = document.getElementById("srTetra");
+    srTetNikke = srTet.querySelectorAll("ul li");
+    for (let i = 0; i < srTetNikke.length; i++){
+        nikke = srTetNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    srAbn = document.getElementById("srAbnormal");
+    srAbnNikke = srAbn.querySelectorAll("ul li");
+    for (let i = 0; i < srAbnNikke.length; i++){
+        nikke = srAbnNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
+    rEly = document.getElementById("rElysion");
+    rElyNikke = rEly.querySelectorAll("ul li");
+    for (let i = 0; i < rElyNikke.length; i++){
+        nikke = rElyNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
+    rMis = document.getElementById("rMissilis");
+    rMisNikke = rMis.querySelectorAll("ul li");
+    for (let i = 0; i < rMisNikke.length; i++){
+        nikke = rMisNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    rTet = document.getElementById("rTetra");
+    rTetNikke = rTet.querySelectorAll("ul li");
+    for (let i = 0; i < rTetNikke.length; i++){
+        nikke = rTetNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
     file = bigIntToBase64(file);
     navigator.clipboard.writeText(file);
     
@@ -68,15 +385,153 @@ function share(){
 
 function save(){
     file = 0n;
+
     ssrEly = document.getElementById("ssrElysion");
     ssrElyNikke = ssrEly.querySelectorAll("ul li");
     for (let i = 0; i < ssrElyNikke.length; i++){
         nikke = ssrElyNikke[i];
         number = nikke.id.match(/\d+/)[0] - 1;
+        console.log(number);
         if (nikke.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
+
+    ssrMis = document.getElementById("ssrMissilis");
+    ssrMisNikke = ssrMis.querySelectorAll("ul li");
+    for (let i = 0; i < ssrMisNikke.length; i++){
+        nikke = ssrMisNikke[i];
+        number = nikke.id.match(/\d+/)[0] - 1;
+        console.log(number);
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    ssrTet = document.getElementById("ssrTetra");
+    ssrTetNikke = ssrTet.querySelectorAll("ul li");
+    for (let i = 0; i < ssrTetNikke.length; i++){
+        nikke = ssrTetNikke[i];
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
+    ssrPil = document.getElementById("ssrPilgrim");
+    ssrPilNikke = ssrPil.querySelectorAll("ul li");
+    for (let i = 0; i < ssrPilNikke.length; i++){
+        nikke = ssrPilNikke[i];
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    ssrAbn = document.getElementById("ssrAbnormal");
+    ssrAbnNikke = ssrAbn.querySelectorAll("ul li");
+    for (let i = 0; i < ssrAbnNikke.length; i++){
+        nikke = ssrAbnNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    srEly = document.getElementById("srElysion");
+    srElyNikke = srEly.querySelectorAll("ul li");
+    for (let i = 0; i < srElyNikke.length; i++){
+        nikke = srElyNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
+    srMis = document.getElementById("srMissilis");
+    srMisNikke = srMis.querySelectorAll("ul li");
+    for (let i = 0; i < srMisNikke.length; i++){
+        nikke = srMisNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    srTet = document.getElementById("srTetra");
+    srTetNikke = srTet.querySelectorAll("ul li");
+    for (let i = 0; i < srTetNikke.length; i++){
+        nikke = srTetNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    srAbn = document.getElementById("srAbnormal");
+    srAbnNikke = srAbn.querySelectorAll("ul li");
+    for (let i = 0; i < srAbnNikke.length; i++){
+        nikke = srAbnNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
+    rEly = document.getElementById("rElysion");
+    rElyNikke = rEly.querySelectorAll("ul li");
+    for (let i = 0; i < rElyNikke.length; i++){
+        nikke = rElyNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
+    rMis = document.getElementById("rMissilis");
+    rMisNikke = rMis.querySelectorAll("ul li");
+    for (let i = 0; i < rMisNikke.length; i++){
+        nikke = rMisNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    
+    rTet = document.getElementById("rTetra");
+    rTetNikke = rTet.querySelectorAll("ul li");
+    for (let i = 0; i < rTetNikke.length; i++){
+        nikke = rTetNikke[i];
+        if (!nikke.id){
+            break;
+        }
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+
     file = bigIntToBase64(file);
     console.log("saving " + file)
     localStorage.setItem("nikkeSave", file);

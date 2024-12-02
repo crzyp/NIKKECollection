@@ -48,8 +48,11 @@ body {
 
 .charImg {
 	height: 64px;
+	width: 64px;
+	object-fit: contain;
 	border-radius: 8px;
 	outline:1px solid rgb(200, 200, 200);
+	-webkit-user-drag: none;
 }
 
 #collectionBox{
@@ -57,6 +60,7 @@ body {
 	width: 100%;
 	max-width: calc(64px * 15 + 5px * 14); /* Max width for 20 columns + gaps */
 	margin: 0 auto; 
+	padding-bottom: 60px;
 }
 
 ul {
@@ -67,7 +71,7 @@ ul {
 	list-style: none;            /* Remove bullet points */
 	padding: 0;                  /* Remove default padding */
 	margin: 0;                   /* Remove default margin */
-	position: absolute; /* Position relative to the container */
+	position: relative; /* Position relative to the container */
 	left: 50%; /* Position the grid in the center horizontally */
 	transform: translateX(-50%); /* Offset the grid by 50% of its width to center it */
 }
