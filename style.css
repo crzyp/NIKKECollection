@@ -1,0 +1,9 @@
+.light {
+	filter: brightness(100%) grayscale(0%);
+	transition: filter 0.5s ease;
+}
+
+.dim {
+	filter: brightness(50%) grayscale(100%);
+	transition: filter 0.5s ease;
+}
