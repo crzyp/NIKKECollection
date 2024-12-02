@@ -38,7 +38,7 @@ function toggle(id){
     }
 }
 
-function save(){
+function share(){
     file = 0n;
     ssrEly = document.getElementById("ssrElysion");
     ssrElyNikke = ssrEly.querySelectorAll("ul li");
