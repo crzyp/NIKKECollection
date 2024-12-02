@@ -12,6 +12,7 @@ function loadCollection(){
     if (queryString.length == 1 && localStorage.getItem("nikkeSave") != null){
         queryString = bigintToBitArray(base64ToBigInt(localStorage.getItem("nikkeSave")));
     } else{
+        console.log("didnt find shit")
         return;
     }
     // im doing some wack ass reversing like 5 times because of endianess
