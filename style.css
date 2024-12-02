@@ -30,6 +30,7 @@
 	transform: translateX(-50%); /* Center the tooltip horizontally */
 	visibility: hidden; /* Initially hidden */
 	transition: opacity 0.3s ease; /* Smooth fade-in */
+	user-select: none;
 }
   
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -52,13 +53,15 @@ img {
 
 ul {
 	display: grid;               /* Enable grid layout */
-	grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));  /* Auto-fill columns */
-	max-width: calc(64px * 15 + 5px * 14); /* Max width for 20 columns + gaps */
+	grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));  /* Auto-fill columns */
+	width: 80%; /* Allow full resizing */
 	gap: 5px;                   /* Space between grid items */
 	list-style: none;            /* Remove bullet points */
 	padding: 0;                  /* Remove default padding */
 	margin: 0;                   /* Remove default margin */
-	position: relative;
+	position: absolute; /* Position relative to the container */
+	left: 50%; /* Position the grid in the center horizontally */
+	transform: translateX(-50%); /* Offset the grid by 50% of its width to center it */
 }
 
 section{
@@ -105,4 +108,36 @@ section{
 @keyframes fadeout {
 	from {top: 30px; opacity: 1;}
 	to {top: 0; opacity: 0;}
+}
+
+button{
+	background-color:rgb(0, 140, 255);
+	color:white;
+	padding:5px;
+	font-family:verdana;
+	border-radius: 4px;
+	font-size:large;
+}
+
+.toolbar{
+	width:100%;
+	display:flex;
+}
+
+.btnList{
+	margin-left:auto;
+	margin-top:10px;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+h1{
+	text-align:center;
+}
+
+#collectionBox{
+	position: relative;
+	width: 100%;
+	max-width: calc(64px * 15 + 5px * 14); /* Max width for 20 columns + gaps */
+	margin: 0 auto; 
 }
