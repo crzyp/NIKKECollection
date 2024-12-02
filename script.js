@@ -371,7 +371,8 @@ function share(){
     }
     
     file = bigIntToBase64(file);
-    navigator.clipboard.writeText(file);
+    const link = "https://crzyp.github.io/NIKKECollection/?" + file;
+    navigator.clipboard.writeText(link);
     
     // share toast
     var x = document.getElementById("shareToast");
