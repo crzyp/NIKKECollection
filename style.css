@@ -51,6 +51,13 @@ img {
 	border-radius: 8px;
 }
 
+#collectionBox{
+	position: relative;
+	width: 100%;
+	max-width: calc(64px * 15 + 5px * 14); /* Max width for 20 columns + gaps */
+	margin: 0 auto; 
+}
+
 ul {
 	display: grid;               /* Enable grid layout */
 	grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));  /* Auto-fill columns */
@@ -62,10 +69,6 @@ ul {
 	position: absolute; /* Position relative to the container */
 	left: 50%; /* Position the grid in the center horizontally */
 	transform: translateX(-50%); /* Offset the grid by 50% of its width to center it */
-}
-
-section{
-	position:relative;
 }
 
 .snackbar {
@@ -122,22 +125,18 @@ button{
 .toolbar{
 	width:100%;
 	display:flex;
+	position: fixed;
+	z-index: 30;
 }
 
 .btnList{
 	margin-left:auto;
 	margin-top:10px;
-	margin-right:10px;
+	margin-right:30px;
 	margin-bottom:10px;
 }
 
-h1{
+#title{
 	text-align:center;
-}
-
-#collectionBox{
-	position: relative;
-	width: 100%;
-	max-width: calc(64px * 15 + 5px * 14); /* Max width for 20 columns + gaps */
-	margin: 0 auto; 
+	padding-top:60px;
 }
