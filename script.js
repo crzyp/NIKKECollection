@@ -9,8 +9,10 @@ String.prototype.removeCharAt = function (i) {
 function loadCollection(){
     let queryString = bigintToBitArray(base64ToBigInt(window.location.search.removeCharAt(1)));
     //yeah, its kinda weird to check if there is a link to load but like wadeva
-    if (queryString.length == 1){
+    if (queryString.length == 1 && localStorage.getItem("nikkeSave") != null){
         queryString = bigintToBitArray(base64ToBigInt(localStorage.getItem("nikkeSave")));
+    } else{
+        return;
     }
     // im doing some wack ass reversing like 5 times because of endianess
     queryString.reverse();
