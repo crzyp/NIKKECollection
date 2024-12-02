@@ -46,7 +46,7 @@ body {
 	z-index: 1;
 }
 
-img {
+.charImg {
 	height: 64px;
 	border-radius: 8px;
 }
