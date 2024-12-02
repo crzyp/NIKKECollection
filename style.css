@@ -49,6 +49,7 @@ body {
 .charImg {
 	height: 64px;
 	border-radius: 8px;
+	outline:1px solid rgb(200, 200, 200);
 }
 
 #collectionBox{
