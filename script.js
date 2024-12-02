@@ -8,20 +8,18 @@ String.prototype.removeCharAt = function (i) {
 
 function loadCollection(){
     const queryString = bigintToBitArray(base64ToBigInt(window.location.search.removeCharAt(1)));
-    console.log(queryString);
+    // im doing some wack ass reversing like 5 times because of endianess
+    queryString.reverse();
 
     ssrEly = document.getElementById("ssrElysion");
     ssrElyNikke = ssrEly.querySelectorAll("ul li");
     for (let i = 0; i < ssrElyNikke.length; i++){
         nikke = ssrElyNikke[i];
         number = nikke.id.match(/\d+/)[0];
-        // im doing some wack ass reversing like 5 times because of endianess
-        if (queryString[queryString.length - 1 - (number - 1)] == 1){
-            console.log(number + ' matches');
+        if (queryString[number - 1] == 1){
             nikke.classList.remove('dim');
             nikke.classList.add('light');
         } else{
-            console.log(number + ' doesnt match')
             nikke.classList.remove('light');
             nikke.classList.add('dim');
         }
@@ -51,9 +49,7 @@ function save(){
             file += BigInt(2 ** number);
         }
     }
-    console.log(file);
     file = bigIntToBase64(file);
-    console.log(file);
     navigator.clipboard.writeText(file);
 }
 

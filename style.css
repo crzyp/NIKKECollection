@@ -7,3 +7,60 @@
 	filter: brightness(50%) grayscale(100%);
 	transition: filter 0.5s ease;
 }
+
+/* Tooltip container */
+.charName {
+	position: relative;
+	display: inline-block;
+}
+  
+/* Tooltip text */
+.charName .charNameText {
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 10; /* High value to ensure it’s on top */
+	width: 120px;
+	bottom: 100%; /* fkn spent 2 hours trying to debug why it wont be shown on top of images so i said fk it we making names on top instead of bottom */
+	left: 50%;
+	transform: translateX(-50%); /* Center the tooltip horizontally */
+	visibility: hidden; /* Initially hidden */
+	transition: opacity 0.3s ease; /* Smooth fade-in */
+}
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+.charName:hover .charNameText {
+	visibility: visible;
+}
+
+body {
+	position:relative;
+	background-color: #16161c;
+	color: #ffffff;
+	font-family: verdana;
+	z-index: 1;
+}
+
+img {
+	height: 64px;
+	border-radius: 8px;
+}
+
+ul {
+	display: grid;               /* Enable grid layout */
+	grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));  /* Auto-fill columns */
+	max-width: calc(64px * 15 + 5px * 14); /* Max width for 20 columns + gaps */
+	gap: 5px;                   /* Space between grid items */
+	list-style: none;            /* Remove bullet points */
+	padding: 0;                  /* Remove default padding */
+	margin: 0;                   /* Remove default margin */
+	position: relative;
+}
+
+section{
+	position:relative;
+}
