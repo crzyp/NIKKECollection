@@ -55,6 +55,15 @@ function share(){
     }
     file = bigIntToBase64(file);
     navigator.clipboard.writeText(file);
+    
+    // share toast
+    var x = document.getElementById("shareToast");
+
+    // Add the "show" class to DIV
+    x.classList.add('show');
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.classList.remove('show'); }, 3000);
 }
 
 function save(){
@@ -71,6 +80,15 @@ function save(){
     file = bigIntToBase64(file);
     console.log("saving " + file)
     localStorage.setItem("nikkeSave", file);
+    
+    // saved toast
+    var x = document.getElementById("savedToast");
+
+    // Add the "show" class to DIV
+    x.classList.add('show');
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.classList.remove('show'); }, 3000);
 }
 
 function bigIntToBase64(bigInt) {
