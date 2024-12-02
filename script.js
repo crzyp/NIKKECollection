@@ -7,7 +7,11 @@ String.prototype.removeCharAt = function (i) {
 }
 
 function loadCollection(){
-    const queryString = bigintToBitArray(base64ToBigInt(window.location.search.removeCharAt(1)));
+    let queryString = bigintToBitArray(base64ToBigInt(window.location.search.removeCharAt(1)));
+    //yeah, its kinda weird to check if there is a link to load but like wadeva
+    if (queryString.length == 1){
+        queryString = bigintToBitArray(base64ToBigInt(localStorage.getItem("nikkeSave")));
+    }
     // im doing some wack ass reversing like 5 times because of endianess
     queryString.reverse();
 
@@ -38,7 +42,7 @@ function toggle(id){
     }
 }
 
-function save(){
+function share(){
     file = 0n;
     ssrEly = document.getElementById("ssrElysion");
     ssrElyNikke = ssrEly.querySelectorAll("ul li");
@@ -51,6 +55,22 @@ function save(){
     }
     file = bigIntToBase64(file);
     navigator.clipboard.writeText(file);
+}
+
+function save(){
+    file = 0n;
+    ssrEly = document.getElementById("ssrElysion");
+    ssrElyNikke = ssrEly.querySelectorAll("ul li");
+    for (let i = 0; i < ssrElyNikke.length; i++){
+        nikke = ssrElyNikke[i];
+        number = nikke.id.match(/\d+/)[0] - 1;
+        if (nikke.classList.contains('light')){
+            file += BigInt(2 ** number);
+        }
+    }
+    file = bigIntToBase64(file);
+    console.log("saving " + file)
+    localStorage.setItem("nikkeSave", file);
 }
 
 function bigIntToBase64(bigInt) {

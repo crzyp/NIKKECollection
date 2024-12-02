@@ -6,7 +6,12 @@
         <title>NIKKE Collection Tracker</title>
     </head>
     <body onload="loadCollection()">
-		<button onclick="save()">save</button>
+		<div class="toolbar">
+			<div class="btnList">
+				<button onclick="save()">Save</button>
+				<button onclick="share()">Generate Share URL</button>
+			</div>
+		</div>
 		<div id="collectionBox">
 			<section id="ssr">
 				<section id="ssrElysion">
