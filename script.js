@@ -552,10 +552,13 @@ function save(){
 
 function toggleBuilder(){
     builder = document.getElementById('builder');
+    btn = document.getElementById('builderToggle');
     if (builder.classList.contains('showBuilder')) {
         builder.classList.remove('showBuilder');
+        btn.classList.remove('builderOn');
     } else {
         builder.classList.add('showBuilder');
+        btn.classList.add('builderOn');
     }
 }
 
