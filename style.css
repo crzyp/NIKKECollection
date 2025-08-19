@@ -46,6 +46,13 @@ body {
 	z-index: 1;
 }
 
+.icon {
+	width: 32px;
+	object-fit: contain;
+	position: relative;
+	padding-left: 10%;
+}
+
 .charImg {
 	height: 64px;
 	width: 64px;
@@ -63,7 +70,7 @@ body {
 	padding-bottom: 60px;
 }
 
-ul {
+#collectionBox ul {
 	display: grid;               /* Enable grid layout */
 	grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));  /* Auto-fill columns */
 	width: 80%; /* Allow full resizing */
