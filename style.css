@@ -47,10 +47,12 @@ body {
 }
 
 .icon {
+	height: 32px;
 	width: 32px;
 	object-fit: contain;
 	position: relative;
-	padding-left: 10%;
+	padding: 10px 0px 5px 10%;
+	-webkit-user-drag: none;
 }
 
 .charImg {
