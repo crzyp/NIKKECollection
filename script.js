@@ -550,6 +550,15 @@ function save(){
     setTimeout(function(){ x.classList.remove('show'); }, 3000);
 }
 
+function toggleBuilder(){
+    builder = document.getElementById('builder');
+    if (builder.classList.contains('showBuilder')) {
+        builder.classList.remove('showBuilder');
+    } else {
+        builder.classList.add('showBuilder');
+    }
+}
+
 function bigIntToBase64(bigInt) {
     // Convert BigInt to a byte array
     const byteArray = [];
