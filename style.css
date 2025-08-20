@@ -83,6 +83,10 @@ body {
 	transform: translateX(-50%); /* Offset the grid by 50% of its width to center it */
 }
 
+#collectionBox li {
+	border-radius: 8px;
+}
+
 .snackbar {
 	visibility: hidden; /* Hidden by default. Visible on click */
 	background-color: #333; /* Black background color */
@@ -185,6 +189,11 @@ button{
 	padding: 0px;                  /* Remove default padding */
 	margin: 20px auto;                   /* Remove default margin */
 	width: max-content;
+}
+
+#builder li {
+	z-index: 1; /* keeps it above the bg color of the li when its selected */
+	border-radius: 8px;
 }
 
 .builderImg {
