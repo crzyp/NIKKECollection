@@ -652,6 +652,49 @@ function build(id) {
         lastClickedChar = null;
 }
 
+async function createTeam(){
+    const imgs = [
+        document.getElementById("builder0").querySelector("img"),
+        document.getElementById("builder1").querySelector("img"),
+        document.getElementById("builder2").querySelector("img"),
+        document.getElementById("builder3").querySelector("img"),
+        document.getElementById("builder4").querySelector("img"),
+    ];
+
+    // make canvas big enough to hold them side by side
+    const width = imgs[0].naturalWidth * imgs.length;
+    const height = imgs[0].naturalHeight;
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext("2d");
+
+    // draw each image next to each other
+    imgs.forEach((img, i) => {
+        ctx.drawImage(img, i * img.naturalWidth, 0);
+    });
+
+    // turn into blob + copy
+    canvas.toBlob(async (blob) => {
+        try {
+            await navigator.clipboard.write([
+                new ClipboardItem({ "image/png": blob }),
+            ]);
+    
+            // share toast
+            var x = document.getElementById("teamToast");
+
+            // Add the "show" class to DIV
+            x.classList.add('show');
+
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.classList.remove('show'); }, 3000);
+        } catch (err) {
+            console.error(err);
+        }
+    }, "image/png");
+}
+
 function bigIntToBase64(bigInt) {
     // Convert BigInt to a byte array
     const byteArray = [];

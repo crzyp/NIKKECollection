@@ -130,12 +130,13 @@ body {
 }
 
 button{
+	padding:5px;
 	background-color:rgb(0, 140, 255);
 	color:white;
-	padding:5px;
 	font-family:verdana;
-	border-radius: 4px;
 	font-size:large;
+	border: 2px outset;
+	border-radius: 4px;
 	border-color: #fff;
 }
 
@@ -194,6 +195,12 @@ button{
 #builder li {
 	z-index: 1; /* keeps it above the bg color of the li when its selected */
 	border-radius: 8px;
+}
+
+#builder button {
+	margin-bottom: 20px;
+	border-radius: 4px;
+	border: 2px outset;
 }
 
 .builderImg {
