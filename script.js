@@ -1,5 +1,9 @@
 const queryString = window.location.search;
 
+var builderOn = false;
+var lastClickedChar = null;
+var lastClickedBuilder = null;
+
 String.prototype.removeCharAt = function (i) {
     var tmp = this.split(''); // convert to an array
     tmp.splice(i - 1 , 1); // remove 1 element from the array (adjusting for non-zero-indexed counts)
@@ -23,12 +27,13 @@ function loadCollection(){
     for (let i = 0; i < ssrElyNikke.length; i++){
         nikke = ssrElyNikke[i];
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -37,12 +42,13 @@ function loadCollection(){
     for (let i = 0; i < ssrMisNikke.length; i++){
         nikke = ssrMisNikke[i];
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -51,12 +57,13 @@ function loadCollection(){
     for (let i = 0; i < ssrTetNikke.length; i++){
         nikke = ssrTetNikke[i];
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -65,12 +72,13 @@ function loadCollection(){
     for (let i = 0; i < ssrPilNikke.length; i++){
         nikke = ssrPilNikke[i];
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -82,12 +90,13 @@ function loadCollection(){
             break;
         }
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -99,12 +108,13 @@ function loadCollection(){
             break;
         }
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -116,12 +126,13 @@ function loadCollection(){
             break;
         }
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -133,12 +144,13 @@ function loadCollection(){
             break;
         }
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -150,12 +162,13 @@ function loadCollection(){
             break;
         }
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -167,12 +180,13 @@ function loadCollection(){
             break;
         }
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -184,12 +198,13 @@ function loadCollection(){
             break;
         }
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -201,12 +216,13 @@ function loadCollection(){
             break;
         }
         number = nikke.id.match(/\d+/)[0];
+        img = nikke.querySelector("img");
         if (queryString[number - 1] == 1){
-            nikke.classList.remove('dim');
-            nikke.classList.add('light');
+            img.classList.remove('dim');
+            img.classList.add('light');
         } else{
-            nikke.classList.remove('light');
-            nikke.classList.add('dim');
+            img.classList.remove('light');
+            img.classList.add('dim');
         }
     }
 
@@ -214,13 +230,34 @@ function loadCollection(){
 }
 
 function toggle(id){
-    nikke = document.getElementById(`nikke${id}`);
-    if (nikke.classList.contains('dim')) {
-        nikke.classList.remove('dim');
-        nikke.classList.add('light');
+    const nikke = document.getElementById(`nikke${id}`);
+    const img = nikke.querySelector("img");
+    //check if builder is on
+    if (builderOn) {
+        //is there one waiting to slot in?
+        if (lastClickedBuilder != null) {
+            const li = document.getElementById(`builder${lastClickedBuilder}`);
+            //change build slot to char
+            li.querySelector("img").src = `img/${id}.webp`;
+            li.style.backgroundColor = "transparent";
+            //reset lastClicked
+            lastClickedBuilder = null;
+            return;
+        }
+        //if there is a nikke ready, reset previous nikke
+        if (lastClickedChar != null){
+            document.getElementById(`nikke${lastClickedChar}`).style.backgroundColor = "transparent";
+        }
+        nikke.style.backgroundColor = "#6a6acf";
+        lastClickedChar = id;
+        return;
+    }
+    if (img.classList.contains('dim')) {
+        img.classList.remove('dim');
+        img.classList.add('light');
     } else {
-        nikke.classList.remove('light');
-        nikke.classList.add('dim');
+        img.classList.remove('light');
+        img.classList.add('dim');
     }
 }
 
@@ -232,7 +269,8 @@ function share(){
     for (let i = 0; i < ssrElyNikke.length; i++){
         nikke = ssrElyNikke[i];
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -242,7 +280,8 @@ function share(){
     for (let i = 0; i < ssrMisNikke.length; i++){
         nikke = ssrMisNikke[i];
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -252,7 +291,8 @@ function share(){
     for (let i = 0; i < ssrTetNikke.length; i++){
         nikke = ssrTetNikke[i];
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -263,7 +303,8 @@ function share(){
     for (let i = 0; i < ssrPilNikke.length; i++){
         nikke = ssrPilNikke[i];
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -276,7 +317,8 @@ function share(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -290,7 +332,8 @@ function share(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -303,7 +346,8 @@ function share(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -316,7 +360,8 @@ function share(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -329,7 +374,8 @@ function share(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -342,7 +388,8 @@ function share(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -355,7 +402,8 @@ function share(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -368,7 +416,8 @@ function share(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -395,8 +444,9 @@ function save(){
     for (let i = 0; i < ssrElyNikke.length; i++){
         nikke = ssrElyNikke[i];
         number = nikke.id.match(/\d+/)[0] - 1;
+        img = nikke.querySelector("img");
         console.log(number);
-        if (nikke.classList.contains('light')){
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -406,8 +456,9 @@ function save(){
     for (let i = 0; i < ssrMisNikke.length; i++){
         nikke = ssrMisNikke[i];
         number = nikke.id.match(/\d+/)[0] - 1;
+        img = nikke.querySelector("img");
         console.log(number);
-        if (nikke.classList.contains('light')){
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -417,7 +468,8 @@ function save(){
     for (let i = 0; i < ssrTetNikke.length; i++){
         nikke = ssrTetNikke[i];
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -427,7 +479,8 @@ function save(){
     for (let i = 0; i < ssrPilNikke.length; i++){
         nikke = ssrPilNikke[i];
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -440,7 +493,8 @@ function save(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -453,7 +507,8 @@ function save(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -466,7 +521,8 @@ function save(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -479,7 +535,8 @@ function save(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -492,7 +549,8 @@ function save(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -505,7 +563,8 @@ function save(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -518,7 +577,8 @@ function save(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -531,7 +591,8 @@ function save(){
             break;
         }
         number = nikke.id.match(/\d+/)[0] - 1;
-        if (nikke.classList.contains('light')){
+        img = nikke.querySelector("img");
+        if (img.classList.contains('light')){
             file += BigInt(2 ** number);
         }
     }
@@ -548,6 +609,90 @@ function save(){
 
     // After 3 seconds, remove the show class from DIV
     setTimeout(function(){ x.classList.remove('show'); }, 3000);
+}
+
+function toggleBuilder(){
+    const builder = document.getElementById('builder');
+    const btn = document.getElementById('builderToggle');
+    if (builderOn) {
+        builder.classList.remove('showBuilder');
+        // haha why do i have global variable builderOn and class builderOn hahhaahaha
+        btn.classList.remove('builderOn');
+        builderOn = false;
+    } else {
+        builder.classList.add('showBuilder');
+        btn.classList.add('builderOn');
+        builderOn = true;
+    }
+}
+
+function build(id) {
+    const li = document.getElementById(`builder${id}`);
+    const img = li.querySelector("img");
+    //if lastClickedBuilder has a value, change it to this one instead
+    if (lastClickedBuilder != null) {
+        document.getElementById(`builder${lastClickedBuilder}`).style.backgroundColor = "transparent";
+        //if it was this exact builder, turn it off
+        if (lastClickedBuilder == id) {
+            lastClickedBuilder = null;
+            return;
+        }
+    }
+    //if lastClickedChar is null, highlight and wait for new
+    if (lastClickedChar == null) {
+        li.style.backgroundColor = "#6a6acf";
+        lastClickedBuilder = id;
+        return;
+    }
+    //else lastClickedChar has a thing, change it to that char
+    img.src = `img/${lastClickedChar}.webp`;
+    //reset the char
+    const nikke = document.getElementById(`nikke${lastClickedChar}`);
+        nikke.style.backgroundColor = "transparent";
+        lastClickedChar = null;
+}
+
+async function createTeam(){
+    const imgs = [
+        document.getElementById("builder0").querySelector("img"),
+        document.getElementById("builder1").querySelector("img"),
+        document.getElementById("builder2").querySelector("img"),
+        document.getElementById("builder3").querySelector("img"),
+        document.getElementById("builder4").querySelector("img"),
+    ];
+
+    // make canvas big enough to hold them side by side
+    const width = imgs[0].naturalWidth * imgs.length;
+    const height = imgs[0].naturalHeight;
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext("2d");
+
+    // draw each image next to each other
+    imgs.forEach((img, i) => {
+        ctx.drawImage(img, i * img.naturalWidth, 0);
+    });
+
+    // turn into blob + copy
+    canvas.toBlob(async (blob) => {
+        try {
+            await navigator.clipboard.write([
+                new ClipboardItem({ "image/png": blob }),
+            ]);
+    
+            // share toast
+            var x = document.getElementById("teamToast");
+
+            // Add the "show" class to DIV
+            x.classList.add('show');
+
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.classList.remove('show'); }, 3000);
+        } catch (err) {
+            console.error(err);
+        }
+    }, "image/png");
 }
 
 function bigIntToBase64(bigInt) {
