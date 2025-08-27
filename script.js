@@ -790,6 +790,15 @@ function toggleBuilder(){
         // haha why do i have global variable builderOn and class builderOn hahhaahaha
         btn.classList.remove('builderOn');
         builderOn = false;
+        //reset last clicked
+        if (lastClickedChar != null){
+            document.getElementById(`nikke${lastClickedChar}`).style.backgroundColor = "transparent";
+            lastClickedChar = null;
+        }
+        if (lastClickedBuilder != null) {
+            document.getElementById(`builder${lastClickedBuilder}`).style.backgroundColor = "transparent";
+            lastClickedBuilder = null;
+        }
     } else {
         builder.classList.add('showBuilder');
         btn.classList.add('builderOn');
