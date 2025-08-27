@@ -1,4 +1,174 @@
 const queryString = window.location.search;
+// dictionary of all the nikke's bursts where [burst number, burst cd, special]
+// burst number is burst number, burst cd is 1 for 40 seconds, 2 for 20 seconds, special is 0 for tia, 1 for rh, 2 for rrh
+const burstValues = {
+    1: [2, 2],
+    2: [3, 1],
+    3: [2, 2],
+    4: [2, 1],
+    5: [2, 2],
+    6: [3, 1],
+    7: [2, 2],
+    8: [3, 1],
+    9: [2, 1],
+    10: [2, 2],
+    11: [2, 2],
+    12: [3, 1],
+    13: [1, 1],
+    14: [3, 1],
+    15: [1, 1],
+    16: [2, 2],
+    17: [1, 2],
+    18: [2, 1],
+    19: [1, 1],
+    20: [3, 1],
+    21: [3, 1],
+    22: [1, 1],
+    23: [1, 1],
+    24: [3, 1],
+    25: [3, 1],
+    26: [3, 1],
+    27: [1, 2],
+    28: [1, 2],
+    29: [3, 1],
+    30: [1, 2],
+    31: [1, 1],
+    32: [3, 1],
+    33: [1, 2],
+    34: [3, 1],
+    35: [1, 1],
+    36: [1, 2],
+    37: [1, 2],
+    38: [1, 2],
+    39: [2, 1],
+    40: [1, 1],
+    41: [2, 1],
+    42: [1, 2],
+    43: [2, 1],
+    44: [3, 1],
+    45: [1, 2],
+    46: [3, 1],
+    47: [2, 2],
+    48: [3, 1],
+    49: [1, 0],
+    50: [2, 2],
+    51: [3, 1],
+    52: [2, 2],
+    53: [3, 1],
+    54: [3, 1],
+    55: [2, 1],
+    56: [1, 2],
+    57: [3, 1],
+    58: [3, 1],
+    59: [3, 1],
+    60: [1, 2],
+    61: [1, 2],
+    62: [3, 1],
+    63: [2, 2],
+    64: [3, 1],
+    65: [3, 1],
+    66: [3, 1],
+    67: [1, 2],
+    68: [2, 0],
+    69: [3, 1],
+    70: [2, 2],
+    71: [1, 2],
+    72: [2, 2],
+    73: [2, 2],
+    74: [2, 2],
+    75: [1, 2],
+    76: [1, 2],
+    77: [2, 2],
+    78: [2, 2],
+    79: [3, 1],
+    80: [2, 1],
+    81: [2, 2],
+    82: [1, 1],
+    83: [3, 1],
+    84: [1, 2],
+    85: [1, 2],
+    86: [2, 2],
+    87: [3, 1],
+    88: [1, 1],
+    89: [2, 2],
+    90: [1, 2],
+    91: [3, 1],
+    92: [2, 2],
+    93: [1, 2],
+    94: [3, 1],
+    95: [2, 2],
+    96: [3, 1],
+    97: [1, 2],
+    98: [3, 1],
+    99: [2, 2],
+    100: [2, 2],
+    101: [0, 0, 0],
+    102: [3, 1],
+    103: [0, 0, 1],
+    104: [3, 1],
+    105: [1, 2],
+    106: [3, 1],
+    107: [1, 2],
+    108: [3, 1],
+    109: [2, 2],
+    110: [1, 1],
+    111: [3, 1],
+    112: [2, 2],
+    113: [2, 2],
+    114: [1, 2],
+    115: [3, 1],
+    116: [1, 1],
+    117: [2, 2],
+    118: [2, 1],
+    119: [2, 2],
+    120: [3, 1],
+    121: [3, 1],
+    122: [3, 1],
+    123: [1, 1],
+    124: [2, 1],
+    125: [3, 1],
+    126: [2, 2],
+    127: [3, 1],
+    128: [1, 2],
+    129: [3, 1],
+    130: [1, 1],
+    131: [3, 1],
+    132: [2, 2],
+    133: [1, 2],
+    134: [3, 1],
+    135: [3, 1],
+    136: [1, 2],
+    137: [3, 1],
+    138: [1, 2],
+    139: [2, 2],
+    140: [2, 1],
+    141: [3, 1],
+    142: [3, 1],
+    143: [0, 0, 2],
+    144: [3, 1],
+    145: [2, 1],
+    146: [2, 1],
+    147: [3, 1],
+    148: [1, 1],
+    149: [3, 1],
+    150: [2, 2],
+    151: [3, 1],
+    152: [1, 2],
+    153: [2, 2],
+    154: [3, 1],
+    155: [2, 2],
+    156: [3, 1],
+    157: [2, 1],
+    158: [3, 1],
+    159: [2, 1],
+    160: [3, 1],
+    161: [1, 1],
+    162: [3, 1],
+    163: [3, 1],
+    164: [1, 2],
+    165: [2, 2],
+    166: [3, 1]
+};
 
 var builderOn = false;
 var lastClickedChar = null;
@@ -242,6 +412,7 @@ function toggle(id){
             li.style.backgroundColor = "transparent";
             //reset lastClicked
             lastClickedBuilder = null;
+            update();
             return;
         }
         //if there is a nikke ready, reset previous nikke
@@ -648,8 +819,132 @@ function build(id) {
     img.src = `img/${lastClickedChar}.webp`;
     //reset the char
     const nikke = document.getElementById(`nikke${lastClickedChar}`);
-        nikke.style.backgroundColor = "transparent";
-        lastClickedChar = null;
+    nikke.style.backgroundColor = "transparent";
+    lastClickedChar = null;
+    update();
+}
+
+function update() {
+    const team = document.getElementById("builder").querySelectorAll("ul li");
+    //reset counter
+    var b1 = false;
+    var b2 = false;
+    var b3 = false;
+    var b1CD = 0;
+    var b2CD = 0;
+    var b3CD = 0;
+    var rh = false;
+    var rrh = false;
+
+    //loop through each character
+    buildLoop: for (let i = 0; i < team.length; i++) {
+        //this gets me the id
+        let id = team[i].querySelector("img").src.split("/").pop().split(".").slice(0, -1).join(".");
+        //skip blanks
+        if (id == "blank") {
+            continue;
+        }
+        //check length for special cases
+        if (burstValues[id].length > 2) {
+            switch (burstValues[id][2]) {
+                //tia
+                case 0:
+                    continue buildLoop
+                //rh
+                case 1:
+                    rh = true;
+                    continue buildLoop;
+                //rrh
+                case 2:
+                    rrh = true;
+                    continue buildLoop;
+                default:
+                    console.log(`Error: unknown special case for ${id}`);
+                    continue buildLoop;
+            }
+        }
+        switch (burstValues[id][0]) {
+            case 1:
+                b1 = true;
+                b1CD += burstValues[id][1];
+                break;
+            case 2:
+                b2 = true;
+                b2CD += burstValues[id][1];
+                break;
+            case 3:
+                b3 = true;
+                b3CD += burstValues[id][1];
+                break;
+            default:
+                console.log(`Error: unknown burst for ${id}`);
+        }
+    }
+
+    //check for rh and rrh, rrh first cause that is how the logic goes in game
+    if (rrh && !b1) {
+        b1 = true;
+        b1CD += 2;
+    } else if (rrh) {
+        b3 = true;
+        b3CD++;
+    }
+
+    if (rh) {
+        if (b1CD < 2) {
+            b1 = true;
+            b1CD++;
+        } else if (b2CD < 2) {
+            b2 = true;
+            b2CD++;
+        } else {
+            b3 = true;
+            b3++;
+        }
+    }
+
+    //update each warning
+    const b1C = document.getElementById("b1Check");
+    const b2C = document.getElementById("b2Check");
+    const b3C = document.getElementById("b3Check");
+    const b1CDC = document.getElementById("b1CDCheck");
+    const b2CDC = document.getElementById("b2CDCheck");
+    const b3CDC = document.getElementById("b3CDCheck");
+
+    if (b1) {
+        b1C.classList.remove("show");
+        if (b1CD < 2) {
+            b1CDC.classList.add("show");
+        } else {
+            b1CDC.classList.remove("show");
+        }
+    } else {
+        b1C.classList.add("show");
+        b1CDC.classList.remove("show");
+    }
+    if (b2) {
+        b2C.classList.remove("show");
+        if (b2CD < 2) {
+            b2CDC.classList.add("show");
+        } else {
+            b2CDC.classList.remove("show");
+        }
+    } else {
+        b2C.classList.add("show");
+        b2CDC.classList.remove("show");
+    }
+    if (b3) {
+        b3C.classList.remove("show");
+        if (b3CD < 2) {
+            b3CDC.classList.add("show");
+        } else {
+            b3CDC.classList.remove("show");
+        }
+    } else {
+        b3C.classList.add("show");
+        b3CDC.classList.remove("show");
+    }
+    return;
 }
 
 async function createTeam(){

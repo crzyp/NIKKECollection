@@ -69,7 +69,6 @@ body {
 	width: 100%;
 	max-width: calc(64px * 15 + 5px * 14); /* Max width for 20 columns + gaps */
 	margin: 0 auto; 
-	padding-bottom: 60px;
 }
 
 #collectionBox ul {
@@ -181,7 +180,31 @@ button{
 }
 
 #builder.showBuilder {
-	max-height: 150px; /* Show the builder */
+	max-height: 300px; /* Show the builder */
+}
+
+#checkers{
+	padding-top: 10px;
+}
+
+#checkers p {
+	display: none;
+	margin: 0px 50% 0px auto;
+	width:max-content;
+}
+
+#checkers p.show{
+	display: block;
+}
+
+.badWarn {
+	color:red;
+	transform: translateX(115%); /* Offset to keep it in line with ul */
+}
+
+.warn {
+	color:orange;
+	transform: translateX(59%); /* Offset to keep it in line with ul */
 }
 
 #builder ul {
@@ -222,4 +245,18 @@ button{
 
 .builderOn {
 	background-color: #484857;
+}
+
+footer {
+	width: 80%;
+	padding: 0;
+	padding-bottom: 60px;
+	margin: 0;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+a {
+	color:rgb(147, 177, 220);
 }
